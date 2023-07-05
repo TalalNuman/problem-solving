@@ -1,0 +1,30 @@
+var removeDuplicates = (nums) => {
+    let hash = new Map()
+    for(let i = 0; i<nums.length;i++){
+        hash.set(nums[i],true)
+    }
+    const array = Array.from(hash.keys())
+
+    for(let i = 0;i < nums.length;i++){
+        nums[i]=array[i]
+    }
+    return array.length
+};
+
+
+// function removeDuplicates(nums) {
+//   if (nums.length === 0) {
+//     return 0; // Empty array, no duplicates
+//   }
+
+//   let uniqueIndex = 0; // Index to track the unique elements
+
+//   for (let i = 1; i < nums.length; i++) {
+//     if (nums[i] !== nums[uniqueIndex]) {
+//       uniqueIndex++;
+//       nums[uniqueIndex] = nums[i];
+//     }
+//   }
+//   // Return the length of the modified array (unique elements)
+//   console.log( uniqueIndex + 1);
+// }
