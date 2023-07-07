@@ -1,0 +1,19 @@
+var divide = function(dividend, divisor) {
+    let result=0;
+
+    // XOR OP return true only and only if both signs are same.
+    let sign = dividend < 0 ^ divisor < 0 ? -1 : 1 
+    
+    divisor = Math.abs(divisor)
+    dividend = Math.abs(dividend)
+    
+    if(divisor==0){
+        return;
+    }
+
+    while(dividend >= divisor){
+        dividend -= divisor
+        result++ 
+    }
+    return result * sign;
+};
