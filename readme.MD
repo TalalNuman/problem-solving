@@ -8,3 +8,4 @@
 6. Remove Duplicates From Sorted Array
 7. Remove Element
 8. Dividing 2 Numbers without using Divide Operator
+9. Path Sum (Tree)
