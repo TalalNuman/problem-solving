@@ -1,0 +1,34 @@
+// O(n^2)
+// function maxProfit(prices: number[]): number {
+//     let minPrice = 0;
+//     let maxPrice = 0;
+//     let profit = 0
+//     for (let i = 0; i <= prices.length; i++) {
+//         for (let j = i + 1; j <= prices.length; j++) {
+//             minPrice = prices[i] < prices[i + 1] ? prices[i] : prices[i + 1];
+//             maxPrice = prices[j] < prices[j + 1] ? prices[j + 1] : prices[j];
+//             profit = maxPrice - minPrice > profit ? maxPrice - minPrice : profit
+//         }
+//     }
+//     return profit;
+// };
+
+
+// O(n)
+function maxProfit(prices: number[]): number {
+    let n = prices.length;
+    if (n == 0) return 0;
+
+    let minPrice = prices[0];
+    let maxProfit = 0;
+
+    for (let i = 1; i < n; i++) {
+        // Calculate profit if we sold on day i
+        maxProfit = Math.max(maxProfit, prices[i] - minPrice);
+        
+        // Update minPrice if a lower price is found
+        minPrice = Math.min(minPrice, prices[i]);
+    }
+    
+    return maxProfit;
+}
