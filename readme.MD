@@ -8,4 +8,5 @@
 6. Remove Duplicates From Sorted Array
 7. Remove Element
 8. Dividing 2 Numbers without using Divide Operator
-9. Path Sum (Tree)
+9. Best Time to Buy and Sell Stock
+10. Path Sum (Tree)
